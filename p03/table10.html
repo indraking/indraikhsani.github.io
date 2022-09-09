@@ -67,5 +67,21 @@
         </tr> 
     </table>
     <p class="gohome"><a  onclick="history.go(-1);" >Go Home</a></p>
+    <script>
+        $(document).ready(function(){
+            $('.nama').click(function(){
+                let nama = $(this).text();
+                let tampil_nama = alert('Nama : '+nama);
+                if(!tampil_nama) return;
+            })
+        })
+        $(document).ready(function(){
+            $('.alamat').click(function(){
+                let alamat = $(this).text();
+                let tampil_alamat = alert('Alamat : '+alamat);
+                if(!tampil_alamat) return;
+            })
+        })
+    </script>
 </body>
 </html>
