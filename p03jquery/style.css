@@ -26,10 +26,16 @@ td {
 td:hover{
     background-color: #fff;
 }
-h5 {
+p {
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    color: rgb(0, 132, 255);
+    width: 100px;
+    background-color: rgb(1, 183, 255);
+    color: #fff;
     cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
 }
 .delete {
     background-color: rgb(245, 144, 144);
