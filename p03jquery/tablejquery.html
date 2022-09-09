@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar 5 Teman</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <h1>Daftar 10 Teman Saya</h1>
+    <table>
+        <tr>
+            <td class="atas">No</td>
+            <td class="atas">Nama</td>
+            <td class="atas">Alamat</td>
+            <td class="atas">Aksi</td>
+        </tr>
+        <tr  id="row__1">
+            <td class="nomor">1</td>
+            <td class="nama">Fanny Rahmasari</td>
+            <td class="alamat">Di hatiku</td>
+            <td class="delete" id="delete__1">delete</td>
+        </tr>
+        <tr id="row__2">
+            <td class="nomor">2</td>
+            <td class="nama">Farras Ramadhan</td>
+            <td class="alamat">Cirebon</td>
+            <td class="delete" id="delete__2">delete</td>
+        </tr>
+        <tr id="row__3">
+            <td class="nomor">3</td>
+            <td class="nama">Ilham Nur Hermawan</td>
+            <td class="alamat">Cirebon</td>
+            <td class="delete" id="delete__3">delete</td>
+        </tr>
+        <tr id="row__4">
+            <td class="nomor">4</td>
+            <td class="nama">Azharangga Kusuma</td>
+            <td class="alamat">Cirebon</td>
+            <td class="delete" id="delete__4">delete</td>
+        </tr>
+        <tr id="row__5">
+            <td class="nomor">5</td>
+            <td class="nama">Egi Susanto</td>
+            <td class="alamat">Cirebon</td>
+            <td class="delete" id="delete__5">delete</td>
+        </tr>        
+        <tr id="row__6">
+            <td class="nomor">6</td>
+            <td class="nama">Ichlas Ardinur</td>
+            <td class="alamat">Cirebon</td>
+            <td class="delete" id="delete__6">delete</td>
+        </tr>        
+        <tr id="row__7">
+            <td class="nomor">7</td>
+            <td class="nama">Ibnu Nava</td>
+            <td class="alamat">Cirebon</td>
+            <td class="delete" id="delete__7">delete</td>
+        </tr>        
+        <tr id="row__8">
+            <td class="nomor">8</td>
+            <td class="nama">Fitrian</td>
+            <td class="alamat">Cirebon</td>
+            <td class="delete" id="delete__8">delete</td>
+        </tr>        
+        <tr id="row__9">
+            <td class="nomor">9</td>
+            <td class="nama">Hardika</td>
+            <td class="alamat">Cirebon</td>
+            <td class="delete" id="delete__9">delete</td>
+        </tr>       
+        <tr id="row__10">
+            <td class="nomor">10</td>
+            <td class="nama" id="nama__10">Ikhfal</td>
+            <td class="alamat">Cirebon</td>
+            <td class="delete" id="delete__10">delete</td>
+        </tr> 
+    </table>
+    <h5 onclick="history.go(-1);">Go Home</h5>
+
+    <script>
+        // Ubah Nama
+        $(document).ready(function(){
+            $('.nama').click(function(){
+                let isi = $(this).text();
+                let isi2 = prompt('Ubah nama : ',isi);
+                if(!isi2) return;
+                $(this).text(isi2);
+            })
+        })
+        // Ubah Alamat
+        $(document).ready(function(){
+            $('.alamat').click(function(){
+                let isi = $(this).text();
+                let isi2 = prompt('Ubah alamat : ',isi);
+                if(!isi2) return;
+                $(this).text(isi2);
+            })
+        })
+
+        // Delete
+        $('.delete').click(function(){
+            let konfirmasi = confirm('Yakin Mau hapus? ')
+            if(!konfirmasi) return;
+            let id = $(this).prop('id');
+            
+            let rid = id.split('__');
+            let baris_ke = rid[1];
+            $('#row__'+baris_ke).slideUp();
+            
+        })
+    </script>
+</body>
+</html>

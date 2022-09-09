@@ -1,3 +1,8 @@
+body{
+    padding: 0;
+    margin: 0;
+    
+}
 .pass-foto img{
     display: block;
     margin-left: auto;
@@ -5,8 +10,38 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin-top: 20px;
+    margin-top: 200px;
 }
 .data-diri {
     text-align: center;
+}
+.table{
+    text-align: center;
+}
+.daftar10{
+    background-color: rgb(1, 183, 255);
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    margin-right: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+
+}
+.daftar5{
+    background-color: rgb(1, 183, 255);
+    padding: 5px;
+    font-size: 15px;
+    margin-right: 10px;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+}
+.daftarjquery{
+    background-color: rgb(1, 183, 255);
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
 }
