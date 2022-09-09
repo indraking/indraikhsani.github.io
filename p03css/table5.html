@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daftar 5 Teman</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 <body>
     <h1>Daftar 5 Teman Saya</h1>
@@ -42,5 +44,21 @@
         </tr>
     </table>
     <p class="gohome"><a  onclick="history.go(-1);" >Go Home</a></p>
+    <script>
+        $(document).ready(function(){
+            $('.nama').click(function(){
+                let nama = $(this).text();
+                let tampil_nama = alert('Nama : '+nama);
+                if(!tampil_nama) return;
+            })
+        })
+        $(document).ready(function(){
+            $('.alamat').click(function(){
+                let alamat = $(this).text();
+                let tampil_alamat = alert('Alamat : '+alamat);
+                if(!tampil_alamat) return;
+            })
+        })
+    </script>
 </body>
 </html>
