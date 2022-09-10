@@ -47,3 +47,7 @@ p {
 .delete:hover{
     background-color: red;
 }
+.gohome a{
+    text-decoration: none;
+    color: #fff;
+}
