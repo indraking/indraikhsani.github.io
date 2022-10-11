@@ -10,12 +10,15 @@
 </head>
 <body>
     <h1>Daftar 10 Teman Saya</h1>
+    <div class="add_data">
+        <p>Tambah data</p>
+    </div>
     <table>
         <tr>
             <td class="atas">No</td>
             <td class="atas">Nama</td>
             <td class="atas">Alamat</td>
-            <td class="atas">Aksi</td>
+            <td class="atas" colspan="2">Aksi</td>
         </tr>
         <tr  id="row__1">
             <td class="nomor">1</td>
@@ -78,8 +81,9 @@
             <td class="delete" id="delete__10">delete</td>
         </tr> 
     </table>
-    <p class="gohome"><a href="../index.html" >Go Home</a></p>
-
+    <div class="gohome">
+        <p><a href="../index.html" >Go Home</a></p>
+    </div>
     <script>
         // Ubah Nama
         $(document).ready(function(){
@@ -99,7 +103,16 @@
                 $(this).text(isi2);
             })
         })
-
+        //  Edit Full
+        // $(document).ready(function(){
+        //     $('.edit').click(function(){
+        //         let nama_baru = prompt('Masukan Nama baru : ');
+        //         let alamat_baru = prompt('Masukan alamat baru : ');
+        //         if(nama_baru){
+        //             $('#nama__10').text(nama_baru);
+        //         }
+        //     })
+        // })
         // Delete
         $('.delete').click(function(){
             let konfirmasi = confirm('Yakin Mau hapus? ')
