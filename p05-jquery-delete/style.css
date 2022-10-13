@@ -1,0 +1,64 @@
+body {
+    padding: 5px;
+    margin: 0;
+}
+h1{
+    text-align: center;
+    margin-top: 10px;
+}
+table {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+.atas {
+    background-color: rgb(1, 183, 255);
+}
+.nomor,.nama,.alamat,.edit,.delete{
+    background-color: #ddd;
+}
+td {
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+td:hover{
+    background-color: #fff;
+}
+.gohome p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100px;
+    background-color: rgb(1, 183, 255);
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+}
+.add_data p {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 100px;
+    background-color: rgb(6, 155, 65);
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+}
+.delete {
+    background-color: rgb(245, 144, 144);
+}
+.delete:hover{
+    background-color: red;
+}
+.gohome a{
+    text-decoration: none;
+    color: #fff;
+}
