@@ -1,8 +1,4 @@
-body{
-    padding: 0;
-    margin: 0;
-    
-}
+
 .pass-foto img{
     display: block;
     margin-left: auto;
@@ -72,4 +68,44 @@ body{
     color: white;
     border-radius: 3px;
     text-decoration: none;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(1, 183, 255);
+    border-radius: 3px;
+    box-shadow: 6px 6px 10px grey;
+}
+.nav_links li{
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+}
+.nav_links a{
+    text-decoration: none;
+    color: black;
+}
+.nav_links :hover{
+    color: white;
+}
+
+.daftar_tugas{
+    margin-top: 70px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 28px;
+}
+#tentang {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#tentang p{
+    text-align: center;
+    margin-top: 50px;
+}
+.foto-sosmed a img{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
 }

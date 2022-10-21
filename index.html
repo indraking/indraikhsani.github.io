@@ -5,25 +5,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>Tugas Pemrograman Web</title>
 </head>
 <body>
-    <div class="pass-foto">
-        <img src="assets/image/pass_foto.jpg">
-    </div>
-    <div class="wrapper">
-        <div class="data-diri">
-            <h1>Indra Ikhsani</h1>
-            <p>TI-KIP-2021-P3</p>
-            <p>41215666</p>
+    <div class="container">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tugas">Tugas</a></li>
+                <li><a href="#tentang">Tentang Saya</a></li>
+            </ul>
+        </nav>
+        <div id="home">
+            <div class="pass-foto">
+                <img src="assets/image/pass_foto.jpg">
+            </div>
+            <div class="wrapper">
+                <div class="data-diri">
+                    <h1>Indra Ikhsani</h1>
+                    <p>TI-KIP-2021-P3</p>
+                    <p>41215666</p>
+                </div>
+            </div>
         </div>
+        <div id="content">
+            <div id="contents">
+                <div id="tugas">
+                    <h2 class="daftar_tugas">Daftar Tugas</h2>
+                    <div class="table">
+                        <a href="p03/table10.html" class="daftar10">Tabel 10 Teman </a>
+                        <a href="p03css/table5.html" class="daftar5">Tabel 5 Teman </a>
+                    </div>
+                    <div class="table1">
+                        <a href="p03jquery/tablejquery.html" class="daftarjquery">Tabel with JQuery </a>
+                    </div>
+                    <div class="table">
+                        <a href="p04css-basic/index.html" class="daftar10">Tugas P04</a>
+                        <a href="p05-jquery-delete/index.html" class="daftar10">Tugas P05</a>
+                        <a href="p06-spa-menu/index.html" class="daftar10">Tugas P06 SPA</a>
+                    </div>
+                </div>
+                <div id="tentang">
+                    <div class="foto-sosmed">
+                        <p>Ikuti Saya</p>
+                        <center>
+                            <a href="https://www.facebook.com/lndraIkhsani" target="_blank"><img src="assets/image/logo-sosmed/fb.png" alt=""></a>
+                            <a href="https://www.instagram.com/indraikhsani/" target="_blank"><img src="assets/image/logo-sosmed/ig.png" alt=""></a>
+                            <a href="https://twitter.com/IndraIkhsani" target="_blank"><img src="assets/image/logo-sosmed/twitter.png" alt=""></a>
+                        </center>
+                        </div>
+                </div>
+            </div>
+        </div> 
     </div>
-    <!-- <div class="table">
-        <a href="p03/table10.html" class="daftar10">Tabel 10 Teman </a>
-        <a href="p03css/table5.html" class="daftar5">Tabel 5 Teman </a>
-    </div>
-    <div class="table1">
-        <a href="p03jquery/tablejquery.html" class="daftarjquery">Tabel with JQuery </a>
-    </div> -->
+    <script>
+        $(document).ready(function() {
+            var currentSection = 0;
+            $('#content').hide();
+            $('ul li a').click(function() {       
+            
+            $('ul li a').removeClass('active');
+            $(this).addClass('active');
+            
+            var href = $(this).attr('href');
+            $('#contents>div').hide();
+            
+            $(href).show();
+                    
+            if(currentSection == 0){
+                $('#content').slideToggle(200);
+                currentSection = href;
+            }else if(currentSection == href){
+                $('#content').slideToggle(200);
+                currentSection = 0;    
+            }else{
+                currentSection = href;
+            }
+            return false;
+        });
+    });
+</script>
 </body>
 </html>
