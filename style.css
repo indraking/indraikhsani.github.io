@@ -33,14 +33,7 @@
         border-color: transparent;
     }
 }
-@media screen and (max-width: 576px) {
-    .firstname , .lastname{
-        font-size: 20px;
-    }
-    .nav_links li {
-        font-size: 14px;
-    }
-}
+
 .table{
     margin-top: 10px;
     text-align: center;
@@ -79,20 +72,7 @@
     border-radius: 3px;
     text-decoration: none;
 }
-.logo {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-}
-.firstname{
-    font-size: 25px;
-}
-.lastname{
-    font-size: 28px;
-    color: rgb(1, 183, 255);
-    margin-left: 5px;
-    font-weight: 700;
-}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -100,11 +80,13 @@ nav {
 .nav_links li{
     display: inline-block;
     list-style: none;
+    text-align: center;
     padding: 10px;
 }
 .nav_links a{
     text-decoration: none;
     color: black;
+
 }
 .nav_links :hover{
     color: rgb(1, 183, 255);
