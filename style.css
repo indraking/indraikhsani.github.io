@@ -33,6 +33,14 @@
         border-color: transparent;
     }
 }
+@media screen and (max-width: 576px) {
+    .firstname , .lastname{
+        font-size: 20px;
+    }
+    .nav_links li {
+        font-size: 14px;
+    }
+}
 .table{
     margin-top: 10px;
     text-align: center;
