@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>SPA</title>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tugas">Tugas</a></li>
+                <li><a href="#kontak">Kontak Saya</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <div id="contents">
+                <div id="home" class="isi_home">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorem molestias, pariatur culpa deserunt perspiciatis provident similique ipsam neque eaque reiciendis corporis facilis error obcaecati ea quam quo cupiditate aliquam explicabo?</p>
+                </div>
+                <div id="tugas" class="isi_tugas">
+                    <h2>Isi pages tugas</h2>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos odio deserunt amet ipsa iure. Minima aliquam fugit eos nisi expedita, maxime vero, labore inventore soluta fugiat, vitae voluptate distinctio tenetur?
+                </div>
+                <div id="kontak" class="isi_kontak">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis aspernatur assumenda vitae dolor nemo iusto harum ipsa maiores eius tempore alias ea quo hic quis perferendis, voluptatem reprehenderit similique asperiores.</h2>
+                </div>
+            </div>
+            <div class="goback">
+                <p><a href="../index.html">Kembali ke halaman utama</a></p>
+            </div>
+        </div>
+    </div>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgb(1, 183, 255);
+            border-radius: 3px;
+        }
+        .nav_links li{
+            display: inline-block;
+            list-style: none;
+            padding: 10px;
+        }
+        .nav_links a{
+            text-decoration: none;
+            color: black;
+        }
+        .nav_links :hover{
+            color: white;
+        }
+        .goback p a {
+            height: 30px;
+            text-align: center;
+            background-color: rgb(1, 183, 255);
+            padding: 5px;
+            border-radius: 3px;
+            color: black;
+            text-decoration: none;
+        }
+        .goback :hover{
+            color: white;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            var currentSection = 0;
+            $('#content').hide();
+            $('ul li a').click(function() {       
+            
+            $('ul li a').removeClass('active');
+            $(this).addClass('active');
+            
+            var href = $(this).attr('href');
+            $('#contents>div').hide();
+            
+            $(href).show();
+                    
+            if(currentSection == 0){
+                $('#content').slideToggle(200);
+                currentSection = href;
+            }else if(currentSection == href){
+                $('#content').slideToggle(200);
+                currentSection = 0;    
+            }else{
+                currentSection = href;
+            }
+            return false;
+        });
+});
+    </script>
+</body>
+</html>
