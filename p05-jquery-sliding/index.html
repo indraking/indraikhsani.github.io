@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>P05 JQuery Sliding</title>
+</head>
+<body>
+    <div class="container">
+        <div id="sentuh"> Sentuh aku</div>
+        <div id="isi">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore sed distinctio eveniet eaque voluptates, consequuntur voluptatem, adipisci aliquam dolore maxime repellendus asperiores? Iure dolorem, necessitatibus rerum eveniet corrupti illum fuga.</div>
+    </div>
+    <style>
+        #sentuh{
+            width: 60%;
+            padding: 5px;
+            text-align: center;
+            background-color: rgb(1, 183, 255);
+            color: #fff;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+        }
+        #isi{
+            width: 60%;
+            padding: 3px;
+            display: none;
+            text-align: center;
+            box-shadow: 3px 3px rgba(219, 219, 219, 0.921);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#sentuh").click(function(){
+                $("#isi").slideToggle("slow");
+            });
+        });
+    </script>
+</body>
+</html>
